@@ -49,13 +49,13 @@ A estrutura foi pensada visando escalabilidade e manutenção futura, permitindo
 Desafio_Tecnico_Rubeus/
 
 
-├── common/
-├── pages/
-│   ├── certificacao/
-│   └── site/
-├── variables/
-├── requirements.txt
-└── README.md
+common/
+pages/
+...certificacao/
+...site/
+variables/
+requirements.txt
+README.md
 
 ---
 
