@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.10.11 on win32)" generated="2026-03-01T01:14:04.797488" rpa="false" schemaversion="5">
+<suite id="s1" name="Pages" source="C:\Desafio_Técnico_Rubeus\pages">
+<suite id="s1-s1" name="Certificacao" source="C:\Desafio_Técnico_Rubeus\pages\certificacao">
+<suite id="s1-s1-s1" name="Certificacao Tests" source="C:\Desafio_Técnico_Rubeus\pages\certificacao\certificacao_tests.robot">
+<test id="s1-s1-s1-t1" name="CT01 - Não deve avançar para etapa 2" line="11">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:04.990511" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:04.989494" elapsed="1.287367"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.276861" elapsed="0.035533"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.313398" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:04.989494" elapsed="1.325905"/>
+</kw>
+<kw name="Dado que o usuário acessa página de certificação" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa página de certificação" owner="certificacao_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:06.318394" level="INFO">Opening url 'https://qualidade.apprbs.com.br/certificacao'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.318394" elapsed="0.410719"/>
+</kw>
+<arg>${URL_CERTIFICACAO}</arg>
+<status status="PASS" start="2026-03-01T01:14:06.318394" elapsed="0.410719"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:06.317392" elapsed="0.411721"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.316395" elapsed="0.412718"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:06.316395" elapsed="0.412718"/>
+</kw>
+<kw name="E preencher formulario de Certificacao com dados válidos" owner="base_keywords" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="preencher formulario de Certificacao com dados válidos" owner="certificacao_keywords">
+<kw name="Preencher Campo" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.731108" elapsed="0.324321"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:07.057430" level="INFO">Clicking element '//input[@name='pessoa.nome']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:07.056424" elapsed="0.117052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:07.173476" level="INFO">Typing text 'João Teste' into text field '//input[@name='pessoa.nome']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:07.173476" elapsed="0.075106"/>
+</kw>
+<arg>${INPUT_NOME_CERT}</arg>
+<arg>${NOME_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:06.731108" elapsed="0.518474"/>
+</kw>
+<kw name="Preencher Campo" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:07.249582" elapsed="1.186917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:08.439487" level="INFO">Clicking element '//input[@placeholder='email@exemplo.com']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:08.437503" elapsed="0.203462"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:08.647962" level="INFO">Typing text 'joao.teste@email.com' into text field '//input[@placeholder='email@exemplo.com']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:08.643968" elapsed="0.266651"/>
+</kw>
+<arg>${INPUT_EMAIL_CERT}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:07.249582" elapsed="1.661037"/>
+</kw>
+<kw name="Preencher Campo" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:08.913617" elapsed="0.041000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:08.955620" level="INFO">Clicking element '//input[@placeholder='(11) 96123-4567']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:08.954617" elapsed="0.155632"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:09.114252" level="INFO">Typing text '11999999999' into text field '//input[@placeholder='(11) 96123-4567']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.111248" elapsed="0.211326"/>
+</kw>
+<arg>${INPUT_TELEFONE_CERT}</arg>
+<arg>${TELEFONE_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:08.911617" elapsed="0.411955"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:06.730105" elapsed="2.593467"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:06.730105" elapsed="2.593467"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:06.730105" elapsed="2.593467"/>
+</kw>
+<kw name="Quando clicar em Concluir" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar em Concluir" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CONCLUIR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.326595" elapsed="0.041996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:09.369590" level="INFO">Clicking element '//button[@id='rbBtnNext']'.</msg>
+<arg>${BTN_CONCLUIR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.369590" elapsed="0.198090"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:09.325576" elapsed="0.242104"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.324570" elapsed="0.243110"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:09.324570" elapsed="0.244111"/>
+</kw>
+<kw name="Então aparecerá a mensagem &quot;É necessário informar a base legal&quot;" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="aparecerá a mensagem &quot;É necessário informar a base legal&quot;" owner="certificacao_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-01T01:14:12.577128" level="INFO">Slept 3 seconds.</msg>
+<arg>3S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.572681" elapsed="3.004447"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:12.629805" level="INFO">Element '//li[normalize-space()='É necessário informar a base legal']' is displayed.</msg>
+<arg>${MSG_BASE_LEGAL_CERT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:12.578117" elapsed="0.052565"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:09.571713" elapsed="3.058969"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:09.570717" elapsed="3.059965"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:09.568681" elapsed="3.062001"/>
+</kw>
+<kw name="E permanecerá na etapa 1" owner="base_keywords" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="permanecerá na etapa 1" owner="certificacao_keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:12.681700" level="INFO">Element 'xpath=//span[contains(@class,'rbStageCounter') and contains(normalize-space(.),'1 / 2')]' is displayed.</msg>
+<arg>${INDICADOR_ETAPA_1}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:12.636697" elapsed="0.045003"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:12.635696" elapsed="0.047007"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:12.633697" elapsed="0.049006"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:12.632698" elapsed="0.050005"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:12.686698" elapsed="2.221737"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:12.684697" elapsed="2.223738"/>
+</kw>
+<tag>CT01</tag>
+<status status="PASS" start="2026-03-01T01:14:04.988495" elapsed="9.920928"/>
+</test>
+<test id="s1-s1-s1-t2" name="CT02 - Botão 'Quero me certificar' do final da página redireciona incorretamente" line="19">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:14.912426" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:14.912426" elapsed="1.282361"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.195789" elapsed="0.033557"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.230346" elapsed="0.002023"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:14.911425" elapsed="1.320944"/>
+</kw>
+<kw name="Dado que o usuário acessa página de certificação" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa página de certificação" owner="certificacao_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:16.248348" level="INFO">Opening url 'https://qualidade.apprbs.com.br/certificacao'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.247345" elapsed="0.441432"/>
+</kw>
+<arg>${URL_CERTIFICACAO}</arg>
+<status status="PASS" start="2026-03-01T01:14:16.246347" elapsed="0.442430"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:16.236351" elapsed="0.452426"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.235348" elapsed="0.453429"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:16.234348" elapsed="0.454429"/>
+</kw>
+<kw name="Quando clicar em Quero Me Certificar no final da página" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar em Quero Me Certificar no final da página" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_QUERO_ME_CERTIFICAR_RODAPE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.695802" elapsed="0.250319"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:16.947125" level="INFO">Clicking element '//a[@id='ixy3u1']'.</msg>
+<arg>${BTN_QUERO_ME_CERTIFICAR_RODAPE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.946121" elapsed="0.416864"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:16.695802" elapsed="0.667183"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:16.694791" elapsed="0.668194"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:16.694791" elapsed="0.668194"/>
+</kw>
+<kw name="Então será redirecionado para Google" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="será redirecionado para Google" owner="certificacao_keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:17.364988" elapsed="0.014997"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:18.245984" level="INFO">Current location contains 'google'.</msg>
+<arg>google</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-03-01T01:14:17.381102" elapsed="0.865882"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:17.364988" elapsed="0.881996"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:17.363986" elapsed="0.884006"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:17.363986" elapsed="0.884006"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:18.261980" elapsed="2.239082"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:18.258991" elapsed="2.242071"/>
+</kw>
+<tag>CT02</tag>
+<status status="PASS" start="2026-03-01T01:14:14.910422" elapsed="5.591635"/>
+</test>
+<test id="s1-s1-s1-t3" name="CT03 - Cards “Outros Cursos” não clicáveis" line="25">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:20.506061" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:20.506061" elapsed="1.354318"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:21.861382" elapsed="0.058553"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:21.920936" elapsed="0.003000"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:20.505050" elapsed="1.419885"/>
+</kw>
+<kw name="Dado que o usuário acessa página de certificação" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa página de certificação" owner="certificacao_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:21.965948" level="INFO">Opening url 'https://qualidade.apprbs.com.br/certificacao'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:21.961935" elapsed="0.385769"/>
+</kw>
+<arg>${URL_CERTIFICACAO}</arg>
+<status status="PASS" start="2026-03-01T01:14:21.959942" elapsed="0.387762"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:21.931933" elapsed="0.415771"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:21.929941" elapsed="0.417763"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:21.927942" elapsed="0.419762"/>
+</kw>
+<kw name="Quando clicar em &quot;Saiba mais&quot; dentro dos cards “Outros Cursos”" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar em &quot;Saiba mais&quot; dentro dos cards “Outros Cursos”" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAIBA_MAIS_OUTROS_CURSOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:22.361812" elapsed="0.242549"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:22.610251" level="INFO">${url_inicial} = https://qualidade.apprbs.com.br/certificacao</msg>
+<var>${url_inicial}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-03-01T01:14:22.604361" elapsed="0.005890"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:22.610251" level="INFO">Clicking element '//div[@id='irx8jg']//p//span//span[contains(text(),'Saiba mais')]'.</msg>
+<arg>${SAIBA_MAIS_OUTROS_CURSOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:22.610251" elapsed="0.063515"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-01T01:14:23.681684" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-01T01:14:22.674783" elapsed="1.007782"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:23.714572" level="INFO">${url_final} = https://qualidade.apprbs.com.br/certificacao</msg>
+<var>${url_final}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-03-01T01:14:23.682565" elapsed="0.032007"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${url_final}</arg>
+<arg>${url_inicial}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-01T01:14:23.715575" elapsed="0.001013"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:22.361812" elapsed="1.354776"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:22.360704" elapsed="1.355884"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:22.360704" elapsed="1.355884"/>
+</kw>
+<kw name="Então permanece igual pois os cards não sao clicáveis" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="permanece igual pois os cards não sao clicáveis" owner="certificacao_keywords">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:23.734132" level="INFO">Current location is 'https://qualidade.apprbs.com.br/certificacao'.</msg>
+<arg>${URL_CERTIFICACAO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:23.723151" elapsed="0.010981"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:23.722132" elapsed="0.013014"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:23.721147" elapsed="0.013999"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:23.720116" elapsed="0.015030"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:23.740132" elapsed="2.279866"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:23.739131" elapsed="2.281756"/>
+</kw>
+<tag>CT03</tag>
+<status status="PASS" start="2026-03-01T01:14:20.504050" elapsed="5.516837"/>
+</test>
+<test id="s1-s1-s1-t4" name="CT04 - Ícone do YouTube redireciona incorretamente" line="31">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:26.026526" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:26.025428" elapsed="1.293559"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.318987" elapsed="0.041493"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.361482" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:26.024402" elapsed="1.339081"/>
+</kw>
+<kw name="Dado que o usuário acessa página de certificação" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa página de certificação" owner="certificacao_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:27.368502" level="INFO">Opening url 'https://qualidade.apprbs.com.br/certificacao'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.368502" elapsed="0.370713"/>
+</kw>
+<arg>${URL_CERTIFICACAO}</arg>
+<status status="PASS" start="2026-03-01T01:14:27.367489" elapsed="0.372724"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:27.365487" elapsed="0.374726"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.365487" elapsed="0.374726"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:27.364483" elapsed="0.375730"/>
+</kw>
+<kw name="Quando clicar no ícone do YouTube no rodapé" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar no ícone do YouTube no rodapé" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ICON_YOUTUBE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.746233" elapsed="0.257701"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:28.004932" level="INFO">Clicking element '//a[@id='ifpwp7']'.</msg>
+<arg>${ICON_YOUTUBE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:28.004932" elapsed="0.365282"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:27.746233" elapsed="0.623981"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:27.745332" elapsed="0.624882"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:27.744216" elapsed="0.625998"/>
+</kw>
+<kw name="Então será redirecionado para canal do Tiktok da Rubeus" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="será redirecionado para canal do Tiktok da Rubeus" owner="certificacao_keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:28.373213" elapsed="0.012009"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:30.973665" level="INFO">Current location contains 'tiktok'.</msg>
+<arg>tiktok</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-03-01T01:14:28.386220" elapsed="2.587445"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:28.372213" elapsed="2.601452"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:28.372213" elapsed="2.601452"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:28.371214" elapsed="2.602451"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:30.974701" elapsed="3.266864"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:30.974701" elapsed="3.266864"/>
+</kw>
+<tag>CT04</tag>
+<status status="PASS" start="2026-03-01T01:14:26.022887" elapsed="8.219577"/>
+</test>
+<test id="s1-s1-s1-t5" name="CT05: Banner Saiba Mais não possui link funcional" line="37">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:34.243460" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:34.243460" elapsed="1.324244"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:35.568705" elapsed="0.038998"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:35.608706" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:34.243460" elapsed="1.366243"/>
+</kw>
+<kw name="Dado que o usuário acessa página de certificação" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa página de certificação" owner="certificacao_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:35.633729" level="INFO">Opening url 'https://qualidade.apprbs.com.br/certificacao'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:35.633729" elapsed="0.380297"/>
+</kw>
+<arg>${URL_CERTIFICACAO}</arg>
+<status status="PASS" start="2026-03-01T01:14:35.632728" elapsed="0.382296"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:35.622703" elapsed="0.392321"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:35.621703" elapsed="0.393321"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:35.621703" elapsed="0.393321"/>
+</kw>
+<kw name="Quando clicar em &quot;Saiba mais&quot; no banner de certificação" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar em &quot;Saiba mais&quot; no banner de certificação" owner="certificacao_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SAIBA_MAIS_CERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.020024" elapsed="0.256314"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:36.276338" level="INFO">Clicking element '//a[@id='i7r4lj']'.</msg>
+<arg>${BTN_SAIBA_MAIS_CERT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.276338" elapsed="0.077529"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:36.019031" elapsed="0.334836"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.018026" elapsed="0.335841"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:36.018026" elapsed="0.336861"/>
+</kw>
+<kw name="Então permanecerá na mesma página, pois o botão não possui link funcional" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="permanecerá na mesma página, pois o botão não possui link funcional" owner="certificacao_keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:36.386718" level="INFO">${href} = None</msg>
+<var>${href}</var>
+<arg>${BTN_SAIBA_MAIS_CERT}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.358892" elapsed="0.027826"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${href}</arg>
+<arg>${None}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.386718" elapsed="0.001021"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:36.401717" level="INFO">${url_inicial} = https://qualidade.apprbs.com.br/certificacao</msg>
+<var>${url_inicial}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.391721" elapsed="0.009996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:36.402830" level="INFO">Clicking element '//a[@id='i7r4lj']'.</msg>
+<arg>${BTN_SAIBA_MAIS_CERT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.401717" elapsed="0.076558"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-01T01:14:37.494591" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.478275" elapsed="1.016316"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:37.518487" level="INFO">${url_final} = https://qualidade.apprbs.com.br/certificacao</msg>
+<var>${url_final}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-03-01T01:14:37.495479" elapsed="0.023008"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${url_final}</arg>
+<arg>${url_inicial}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-01T01:14:37.518487" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:36.357872" elapsed="1.161615"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:36.357872" elapsed="1.161615"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:36.356889" elapsed="1.162598"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:37.520486" elapsed="2.142455"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:37.520486" elapsed="2.142455"/>
+</kw>
+<tag>CT05</tag>
+<status status="PASS" start="2026-03-01T01:14:34.242464" elapsed="5.421569"/>
+</test>
+<status status="PASS" start="2026-03-01T01:14:04.818494" elapsed="34.846937"/>
+</suite>
+<status status="PASS" start="2026-03-01T01:14:04.817487" elapsed="34.849959"/>
+</suite>
+<suite id="s1-s2" name="Site" source="C:\Desafio_Técnico_Rubeus\pages\site">
+<suite id="s1-s2-s1" name="Site Tests" source="C:\Desafio_Técnico_Rubeus\pages\site\site_tests.robot">
+<test id="s1-s2-s1-t1" name="CT01 - Envio de Formulário Exibe Erro Base Legal" line="12">
+<kw name="Abrir Navegador" owner="browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:39.703439" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:39.703439" elapsed="1.429191"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.133636" elapsed="0.045552"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.180184" elapsed="0.002997"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:39.702440" elapsed="1.481743"/>
+</kw>
+<kw name="Dado que o usuário acessa a Home" owner="base_keywords" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o usuário acessa a Home" owner="site_keywords">
+<kw name="Ir Para URL" owner="base_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:41.192184" level="INFO">Opening url 'https://qualidade.apprbs.com.br/site'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.192184" elapsed="0.368353"/>
+</kw>
+<arg>${URL_HOME}</arg>
+<status status="PASS" start="2026-03-01T01:14:41.191182" elapsed="0.370391"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:41.190182" elapsed="0.371391"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.188185" elapsed="0.373388"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:41.185182" elapsed="0.376391"/>
+</kw>
+<kw name="E preenche o formulário com dados válidos" owner="base_keywords" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="preenche o formulário com dados válidos" owner="site_keywords">
+<kw name="preencher campo" owner="site_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.563567" elapsed="0.244213"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:41.807780" level="INFO">Clicking element '//input[@name='pessoa.nome']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.807780" elapsed="0.138618"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:41.946398" level="INFO">Typing text 'João Teste' into text field '//input[@name='pessoa.nome']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.946398" elapsed="0.067445"/>
+</kw>
+<arg>${INPUT_NOME}</arg>
+<arg>${NOME_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:41.563567" elapsed="0.450276"/>
+</kw>
+<kw name="preencher campo" owner="site_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:42.014843" elapsed="1.341311"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:43.357140" level="INFO">Clicking element '//input[@placeholder='email@exemplo.com']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.357140" elapsed="0.132469"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:43.490983" level="INFO">Typing text 'joao.teste@email.com' into text field '//input[@placeholder='email@exemplo.com']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.490983" elapsed="0.126880"/>
+</kw>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:42.014843" elapsed="1.603020"/>
+</kw>
+<kw name="preencher campo" owner="site_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.618855" elapsed="0.023063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:43.643923" level="INFO">Clicking element '//input[@placeholder='(11) 96123-4567']'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.642922" elapsed="0.099764"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:43.743686" level="INFO">Typing text '11999999999' into text field '//input[@placeholder='(11) 96123-4567']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.743686" elapsed="0.145531"/>
+</kw>
+<arg>${INPUT_TELEFONE}</arg>
+<arg>${TELEFONE_VALIDO}</arg>
+<status status="PASS" start="2026-03-01T01:14:43.617863" elapsed="0.271354"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:41.562563" elapsed="2.327637"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:41.562563" elapsed="2.327637"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:41.561573" elapsed="2.328627"/>
+</kw>
+<kw name="Quando clicar em Concluir" owner="base_keywords" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clicar em Concluir" owner="site_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:43.898212" level="INFO">Clicking element '//button[@id='rbBtnNext']'.</msg>
+<arg>${BTN_CONCLUIR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.897211" elapsed="0.135528"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:43.896201" elapsed="0.136538"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:43.894205" elapsed="0.138534"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:43.892201" elapsed="0.140538"/>
+</kw>
+<kw name="Então aparecerá a mensagem &quot;É necessário informar a base legal&quot;" owner="base_keywords" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="aparecerá a mensagem &quot;É necessário informar a base legal&quot;" owner="site_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-01T01:14:47.039546" level="INFO">Slept 3 seconds.</msg>
+<arg>3S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-01T01:14:44.035758" elapsed="3.004806"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-01T01:14:47.097767" level="INFO">Element '//li[normalize-space()='É necessário informar a base legal']' is displayed.</msg>
+<arg>${MSG_BASE_LEGAL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-01T01:14:47.041687" elapsed="0.057096"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:44.035758" elapsed="3.063025"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-03-01T01:14:44.033760" elapsed="3.065023"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:44.033760" elapsed="3.065023"/>
+</kw>
+<kw name="Fechar Navegador" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-01T01:14:47.100783" elapsed="2.166917"/>
+</kw>
+<status status="PASS" start="2026-03-01T01:14:47.099783" elapsed="2.167917"/>
+</kw>
+<tag>formulario</tag>
+<status status="PASS" start="2026-03-01T01:14:39.702440" elapsed="9.566253"/>
+</test>
+<status status="PASS" start="2026-03-01T01:14:39.672456" elapsed="9.598234"/>
+</suite>
+<status status="PASS" start="2026-03-01T01:14:39.668447" elapsed="9.604243"/>
+</suite>
+<status status="PASS" start="2026-03-01T01:14:04.798470" elapsed="44.476220"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CT01</stat>
+<stat pass="1" fail="0" skip="0">CT02</stat>
+<stat pass="1" fail="0" skip="0">CT03</stat>
+<stat pass="1" fail="0" skip="0">CT04</stat>
+<stat pass="1" fail="0" skip="0">CT05</stat>
+<stat pass="1" fail="0" skip="0">formulario</stat>
+</tag>
+<suite>
+<stat name="Pages" id="s1" pass="6" fail="0" skip="0">Pages</stat>
+<stat name="Certificacao" id="s1-s1" pass="5" fail="0" skip="0">Pages.Certificacao</stat>
+<stat name="Certificacao Tests" id="s1-s1-s1" pass="5" fail="0" skip="0">Pages.Certificacao.Certificacao Tests</stat>
+<stat name="Site" id="s1-s2" pass="1" fail="0" skip="0">Pages.Site</stat>
+<stat name="Site Tests" id="s1-s2-s1" pass="1" fail="0" skip="0">Pages.Site.Site Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
