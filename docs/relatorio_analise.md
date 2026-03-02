@@ -44,7 +44,7 @@ Os itens foram classificados conforme critérios fornecidos:
 **Tipo:** Melhoria
 **Classificação:** Desejabilidade
 **Prioridade:** Baixa
-**Descrição:** O item “Biblioteca” apresenta um ícone desalinhado em relação ao texto e aos demais itens do menu superior. Além disso, apenas esse item possui ícone, gerando inconsistência visual no padrão de navegação.
+**Descrição:** Apenas o item “Biblioteca” possui ícone, gerando inconsistência visual no padrão de navegação comparado com os demais.
 
 ---
 

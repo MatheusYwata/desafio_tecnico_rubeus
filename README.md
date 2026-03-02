@@ -132,7 +132,7 @@ Arquivos gerados:
 
 O relatório detalhado com todos os itens identificados está disponível em:
 
-docs/relatorio_analise.md
+[Relatório Completo de Análise](docs/relatorio_analise.md)
 
 ---
 
