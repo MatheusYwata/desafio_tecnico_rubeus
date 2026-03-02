@@ -56,6 +56,8 @@ Desafio_Tecnico_Rubeus/
 │   ├── certificacao/
 │   └── site/
 ├── variables/
+├── docs/
+│    └── relatorio_analise.md
 ├── requirements.txt
 └── README.md
 ```
@@ -124,6 +126,13 @@ Arquivos gerados:
 - log.html
 - report.html
 - output.xml
+
+---
+## Relatório Completo
+
+O relatório detalhado com todos os itens identificados está disponível em:
+
+docs/relatorio_analise.md
 
 ---
 
